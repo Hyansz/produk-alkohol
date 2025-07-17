@@ -27,17 +27,17 @@ export default function Footer() {
                         <h4 className="text-lg font-semibold mb-4">Perusahaan</h4>
                         <ul className="text-sm space-y-2 text-gray-400">
                             <li>
-                                <Link to="/about" className="hover:text-white transition">
+                                <Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-white transition">
                                     Tentang Kami
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/products" className="hover:text-white transition">
+                                <Link to="/products" onClick={() => window.scrollTo(0, 0)} className="hover:text-white transition">
                                     Produk
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/blog" className="hover:text-white transition">
+                                <Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="hover:text-white transition">
                                     Blog
                                 </Link>
                             </li>
