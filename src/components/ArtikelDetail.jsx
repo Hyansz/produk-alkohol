@@ -3,10 +3,9 @@ import { useParams } from "react-router-dom";
 export default function ArtikelDetail() {
     const { slug } = useParams();
 
-    // Contoh artikel dummy (nanti bisa fetch dari API atau state global)
     const artikel = {
         title: "Detail dari " + slug.replace(/-/g, " "),
-        image: "/bsm.jpg",
+        image: "/bsm.webp",
         content:
             "Ini adalah isi lengkap dari artikel yang dipilih. Anda bisa mengganti dengan konten dinamis.",
     };
@@ -21,6 +20,7 @@ export default function ArtikelDetail() {
             <img
                 src={artikel.image}
                 alt={artikel.title}
+                loading="lazy"
                 className="w-full max-h-96 object-cover rounded mb-6"
             />
             <h1 className="text-3xl font-bold text-gray-800 mb-4">

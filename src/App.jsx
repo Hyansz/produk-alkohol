@@ -21,7 +21,6 @@ function App() {
         <div className="font-sans">
             <Header />
             <Routes>
-            {/* <ScrollToTop /> */}
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/about" element={<About />} />

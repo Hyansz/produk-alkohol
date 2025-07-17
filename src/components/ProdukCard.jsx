@@ -1,13 +1,6 @@
 import { FaWhatsapp } from "react-icons/fa";
 
-export default function ProdukCard({
-    image,
-    size,
-    title,
-    price,
-    description,
-    waLink,
-}) {
+export default function ProdukCard({ image, size, title, price, description, waLink }) {
     return (
         <div
             className="rounded-xl p-4 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border border-green-300"
@@ -23,6 +16,7 @@ export default function ProdukCard({
                 <img
                     src={image}
                     alt={title}
+                    loading="lazy"
                     className="w-60 h-auto object-contain mx-auto rounded-lg"
                 />
             </div>
@@ -30,9 +24,7 @@ export default function ProdukCard({
             <h3 className="text-md font-semibold text-gray-900">{title}</h3>
 
             <p className="text-black font-semibold text-lg mt-2">{price}</p>
-            <p className="text-sm text-slate-500 mb-2">
-                *S & K Berlaku
-            </p>
+            <p className="text-sm text-slate-500 mb-2">*S & K Berlaku</p>
 
             <p className="text-sm text-gray-600">{description}</p>
 

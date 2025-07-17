@@ -1,6 +1,4 @@
 import ProdukList from "../components/ProdukList";
-import shp from "../assets/shopee.png";
-import tkp from "../assets/tokopedia.png";
 
 export default function Products() {
     return (
@@ -47,11 +45,13 @@ export default function Products() {
                         className="w-24 sm:w-28 md:w-36"
                     >
                         <img
-                            src={shp}
+                            src="/shopee.webp"
                             alt="Shopee"
+                            loading="lazy"
                             className="w-full hover:scale-105 transition duration-300"
                         />
                     </a>
+
                     <a
                         href="http://www.tokopedia.com/entri-jaya-makmur"
                         target="_blank"
@@ -59,8 +59,9 @@ export default function Products() {
                         className="w-24 sm:w-28 md:w-36"
                     >
                         <img
-                            src={tkp}
+                            src="/tokopedia.webp"
                             alt="Tokopedia"
+                            loading="lazy"
                             className="w-full hover:scale-105 transition duration-300"
                         />
                     </a>

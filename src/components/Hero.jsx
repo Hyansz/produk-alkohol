@@ -10,13 +10,13 @@ export default function Hero({ detail }) {
             title: "Bahan Baku Parfum",
             description:
                 "Dengan kemurnian tinggi, Alkohol Antiseptik 96% digunakan sebagai bahan baku pembuatan parfum, kosmetik, wewangian, dll. Dengan hasil akhir yang berkualitas.",
-            background: "/bsm.jpg",
+            background: "/bsm.webp",
         },
         {
             title: "Antiseptik Kualitas Premium",
             description:
                 "Kami menyediakan alkohol antiseptik 70% dan 96% dalam berbagai ukuran untuk kebutuhan industri dan rumah tangga.",
-            background: "/bsm2.jpg",
+            background: "/bsm2.webp",
         },
     ];
 

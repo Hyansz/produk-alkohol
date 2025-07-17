@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Logo1 from "../assets/logo1.png";
-import Logo2 from "../assets/logo3.png";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -35,14 +33,16 @@ export default function Header() {
             <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
                 <Link to="/">
                     <img
-                        src={Logo1}
-                        alt=""
+                        src="/logo1.webp"
+                        alt="Logo"
                         className="block md:hidden h-10 w-auto object-contain"
+                        loading="lazy"
                     />
                     <img
-                        src={Logo2}
-                        alt=""
+                        src="/logo3.webp"
+                        alt="Logo"
                         className="hidden md:block h-10 w-auto object-contain"
+                        loading="lazy"
                     />
                 </Link>
 
@@ -75,24 +75,16 @@ export default function Header() {
             {menuOpen && (
                 <div
                     className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out px-6 ${
-                        menuOpen
-                            ? "max-h-60 opacity-100 py-4"
-                            : "max-h-0 opacity-0 py-0"
+                        menuOpen ? "max-h-60 opacity-100 py-4" : "max-h-0 opacity-0 py-0"
                     }`}
                 >
                     <Link to="/" className="hover:text-gray-200 block py-1">
                         Home
                     </Link>
-                    <Link
-                        to="/products"
-                        className="hover:text-gray-200 block py-1"
-                    >
+                    <Link to="/products" className="hover:text-gray-200 block py-1">
                         Produk
                     </Link>
-                    <Link
-                        to="/about"
-                        className="hover:text-gray-200 block py-1"
-                    >
+                    <Link to="/about" className="hover:text-gray-200 block py-1">
                         Tentang Kami
                     </Link>
                     <Link to="/blog" className="hover:text-gray-200 block py-1">

@@ -5,7 +5,6 @@ import Kontak from "../components/Kontak";
 export default function About() {
     return (
         <>
-            {/* Header Section */}
             <div className="bg-gray-900 text-white h-96 md:mt-10 flex items-center justify-center px-4 text-center">
                 <div className="max-w-3xl">
                     <h2
