@@ -1,6 +1,3 @@
-import shp from "../assets/shopee.png";
-import tkp from "../assets/tokopedia.png";
-
 export default function Collab() {
     return (
         <section
@@ -34,7 +31,7 @@ export default function Collab() {
 
                 <div className="flex-1">
                     <img
-                        src="/bsm.jpg"
+                        src="/bsm.webp"
                         alt="Bangunan Perusahaan"
                         className="w-full h-auto max-w-full mx-auto rounded-lg shadow-lg object-cover"
                     />
@@ -58,7 +55,7 @@ export default function Collab() {
                         className="w-24 sm:w-28 md:w-36"
                     >
                         <img
-                            src={shp}
+                            src="/shopee.webp"
                             alt="Shopee"
                             className="w-full hover:scale-105 transition duration-300"
                         />
@@ -70,7 +67,7 @@ export default function Collab() {
                         className="w-24 sm:w-28 md:w-36"
                     >
                         <img
-                            src={tkp}
+                            src="/tokopedia.webp"
                             alt="Tokopedia"
                             className="w-full hover:scale-105 transition duration-300"
                         />

@@ -29,7 +29,12 @@ export default function Artikel() {
 
     return (
         <section className="w-11/12 mx-auto pt-10 pb-10">
-            <div className="block md:hidden">
+            <div
+                className="block md:hidden"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+                data-aos-duration="800"
+            >
                 <Swiper
                     modules={[Pagination]}
                     slidesPerView={1}
@@ -38,13 +43,7 @@ export default function Artikel() {
                     speed={600}
                 >
                     {articles.map((article, index) => (
-                        <SwiperSlide
-                            key={index}
-                            className="mb-10"
-                            data-aos="zoom-in"
-                            data-aos-delay={index * 200}
-                            data-aos-duration="800"
-                        >
+                        <SwiperSlide key={index} className="mb-10">
                             <Card {...article} />
                         </SwiperSlide>
                     ))}
@@ -70,9 +69,16 @@ export default function Artikel() {
 function Card({ image, title, excerpt, slug }) {
     return (
         <div className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-            <img src={image} alt={title} loading="lazy" className="w-full h-48 object-cover" />
+            <img
+                src={image}
+                alt={title}
+                loading="lazy"
+                className="w-full h-48 object-cover"
+            />
             <div className="p-6">
-                <h2 className="text-xl font-semibold mb-2 text-gray-800">{title}</h2>
+                <h2 className="text-xl font-semibold mb-2 text-gray-800">
+                    {title}
+                </h2>
                 <p className="text-gray-600 mb-4">{excerpt}</p>
                 <Link
                     to={`/blog/${slug}`}

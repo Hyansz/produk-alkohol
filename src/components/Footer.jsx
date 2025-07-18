@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
-import banner from "../assets/logo3.png";
 
 export default function Footer() {
     return (
         <footer className="bg-gray-900 text-white text-center md:text-left pt-12 pb-8">
             <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-10">
                 <div className="md:w-1/3">
-                    <img src={banner} alt="Logo" className="mb-5 w-65 md:mx-0 mx-auto" />
+                    <img src="/logo3.webp" alt="Logo" className="mb-5 w-65 md:mx-0 mx-auto" />
                     <p className="text-sm text-gray-400 mb-4">Bahan baku alkohol dengan konsentrasi yang lebih tinggi untuk menghasilkan produk parfum, kosmetik, dan wewangian yang lebih berkualitas, tahan lama, dan stabil.</p>
                     <div className="flex justify-center md:justify-start gap-4 mt-4">
                         <a href="https://www.facebook.com/pt.entrijayamakmur/" className="hover:text-green-400 transition">

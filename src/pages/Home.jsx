@@ -43,7 +43,7 @@ export default function Home() {
                 data-aos-delay="300"
                 data-aos-duration="1000"
             >
-                Blog & Artikel
+                Blog
             </h1>
             <Artikel />
         </>

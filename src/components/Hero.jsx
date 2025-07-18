@@ -2,21 +2,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { motion } from "framer-motion";
 
 export default function Hero({ detail }) {
     const slides = [
         {
             title: "Bahan Baku Parfum",
             description:
-                "Dengan kemurnian tinggi, Alkohol Antiseptik 96% digunakan sebagai bahan baku pembuatan parfum, kosmetik, wewangian, dll. Dengan hasil akhir yang berkualitas.",
-            background: "/bsm.webp",
+                "Dengan kemurnian tinggi, Alkohol Antiseptik 96% digunakan sebagai bahan baku pembuatan parfum, kosmetik, wewangian, dll.",
+            image: "/bsm.webp",
         },
         {
             title: "Antiseptik Kualitas Premium",
             description:
                 "Kami menyediakan alkohol antiseptik 70% dan 96% dalam berbagai ukuran untuk kebutuhan industri dan rumah tangga.",
-            background: "/bsm2.webp",
+            image: "/bsm2.webp",
         },
     ];
 
@@ -26,54 +25,37 @@ export default function Hero({ detail }) {
                 modules={[Pagination, Autoplay]}
                 slidesPerView={1}
                 pagination={{ clickable: true }}
-                autoplay={{ delay: 5000, disableOnInteraction: false }}
-                loop
+                autoplay={{ delay: 4000, disableOnInteraction: false }}
+                loop={true}
                 grabCursor
                 className="max-w-screen"
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
-                        <div
-                            className="relative w-full h-screen bg-cover bg-center flex items-center justify-center"
-                            style={{
-                                backgroundImage: `url(${slide.background})`,
-                            }}
-                        >
+                        <div className="relative w-full h-screen">
+                            <img
+                                src={slide.image}
+                                alt={slide.title}
+                                className="absolute inset-0 w-full h-full object-cover"
+                                loading="lazy"
+                                decoding="async"
+                                fetchpriority="high"
+                            />
                             <div className="absolute inset-0 bg-black/60"></div>
-
-                            <motion.div
-                                className="relative z-10 px-6 md:px-16 text-white text-center max-w-4xl"
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1 }}
-                                key={index}
-                            >
-                                <motion.h2
-                                    className="text-3xl md:text-5xl font-bold mb-4"
-                                    initial={{ opacity: 0, y: 30 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.2, duration: 0.8 }}
-                                >
+                            <div className="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-4 md:px-16">
+                                <h2 className="text-3xl md:text-5xl font-bold mb-4">
                                     {slide.title}
-                                </motion.h2>
-                                <motion.p
-                                    className="mb-6 text-base md:text-lg"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ delay: 0.4, duration: 0.8 }}
-                                >
+                                </h2>
+                                <p className="mb-6 text-base md:text-lg max-w-3xl">
                                     {slide.description}
-                                </motion.p>
-                                <motion.button
+                                </p>
+                                <button
                                     onClick={detail}
                                     className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full font-semibold transition cursor-pointer"
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 0.6, duration: 0.6 }}
                                 >
                                     Detail
-                                </motion.button>
-                            </motion.div>
+                                </button>
+                            </div>
                         </div>
                     </SwiperSlide>
                 ))}
