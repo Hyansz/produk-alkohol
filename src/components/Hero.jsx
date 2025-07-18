@@ -37,7 +37,7 @@ export default function Hero({ detail }) {
                                 src={slide.image}
                                 alt={slide.title}
                                 className="absolute inset-0 w-full h-full object-cover"
-                                loading="lazy"
+                                loading="eager"
                                 decoding="async"
                                 fetchpriority="high"
                             />
